@@ -1,0 +1,28 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<tittle></tittle>
+</head>
+<body>
+	<ul	id= 'contenedor'></ul>
+<script >
+	var i=0
+	function cargarNumeros(n){
+	var contenedor = document.getElementById( 'contenedor')
+	var li = document.createElement('li')
+	var txt = document.createTextNode(n+ 'desde la funcion')
+	li.appendChild(txt)
+	contenedor.appendChild(li)
+
+	
+	}
+	//*for( var i=0; i<100; i++ cargarNumeros(i)
+	while(i<7){
+		i =Math.random()*8;
+		cargarNumeros(i)
+		i++
+	}
+	</script>'
+
+</body>
+</html>

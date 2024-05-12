@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<tittle></tittle>
+<style>
+	.verde{
+		color: green;
+	}
+</style>
+</head>
+<body>
+	<div id="saludos">
+		<h1 id = 'saludos'> </h1>
+	</div>
+
+<input type="" id ="entrada">
+<button id ="btn" >Click</button>
+<p id='cantidades'></p>
+<p id='asistieron'></p>
+<script>
+let cantidadDeSaludos = 0;
+let cantidadDeAsistentes = 0;
+let titulo = document.getElementById('saludos');
+let entrada = document.getElementById('entrada');
+let btn = document.getElementById('btn');
+let contenedor = document.getElementById('saludos')
+let cantidades = document.getElementById('cantidades');
+let aisitieron = document.getElementById('asistieron');
+
+
+ btn.addEventListener('click',function(){
+ 	cantidadDeSaludos++
+ 	let tipo = entrada.value;
+ 	if(tipo != ''){
+ 	 let saludito = 'Invitado: '+ tipo + ''
+ 	 var sal = document.createElement('h1');
+ 	 var txt = document.createTextNode( saludito)
+ 	 sal.appendChild(txt);
+ 	 contenedor.appendChild(sal);
+ 	 if (cantidadDeSaludos>1) {
+           cantidades.innerHTML = 'tenemos:  '+cantidadDeSaludos+' invitados';
+ 	 }
+ 	  else{cantidades.innerHTML = 'tenemos '+cantidadDeSaludos+' invitado';}
+  	 }
+ 	 })
+  
+  document.addEventListener('click',function(e){
+  	if (e.target.localName == 'h1'){
+  		e.target.innerHTML = e.target.innerHTML + 'Asistio'
+  		e.target.classList.add('verde')
+  		cantidadDeAsistentes++
+  		asistieron.innerHTML = 'Asisteron: '+cantidadDeAsistentes
+  		}
+  
+  })
+
+
+</script>
+</body>
+</html>

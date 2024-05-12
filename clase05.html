@@ -1,0 +1,26 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<tittle></tittle>
+</head>
+<body>
+<script>
+let scorePlayer1 = Math.floor( Math.random() * (1000 - 1)) + 1;
+let scorePlayer2 = Math.floor( Math.random() * (1000 - 1)) + 1;
+let scorePlayer3 = Math.floor( Math.random() * (1000 - 1)) + 1;
+let perfectscore = 40
+
+if (scorePlayer1 > scorePlayer2 && scorePlayer1 > scorePlayer3 || scorePlayer1 == perfectscore)
+ {console.log( ' player 1 ganaste con tus ' +scorePlayer1)} 
+else if( scorePlayer2 > scorePlayer1 && scorePlayer2 > scorePlayer3 || scorePlayer2 == perfectscore){
+	console.log( 'player 2 ganaste con tus '+scorePlayer2)
+}
+else if (scorePlayer3 > scorePlayer1 && scorePlayer3 > scorePlayer2 || scorePlayer3 == perfectscore) {
+	console.log( 'payer 3 ganaste con tus ' +scorePlayer3)
+}
+else {console.log( 'No hay ganador')}
+console.log( 'player 1: '+scorePlayer1, 'player 2: '+scorePlayer2, 'player 3: '+scorePlayer3 )
+</script>
+
+</body>
+</html>
